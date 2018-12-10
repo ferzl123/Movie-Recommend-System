@@ -14,9 +14,11 @@
 ## Data preprocessing
 Crawled raw data from Netflix
 Python using urllib
->from urllib import request
-  resp = request.urlopen('https://movie.douban.com/nowplaying/hangzhou/')
-  html_data = resp.read().decode('utf-8')
+```
+from urllib import request
+resp = request.urlopen('https://movie.douban.com/nowplaying/hangzhou/')
+html_data = resp.read().decode('utf-8')
+```
 
 
 ## MapReduce jobs
