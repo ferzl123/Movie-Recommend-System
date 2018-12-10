@@ -1,4 +1,4 @@
-### Introduction
+# **Introduction**
 
 Designed and developed a movie recommender system based on Netflix user rating history.
 
@@ -10,4 +10,4 @@ Designed and developed a movie recommender system based on Netflix user rating h
 
 ◆ Deployed MRUnit to test the MapReduce job logic and monitor the output.
 
-
+##
