@@ -86,11 +86,17 @@ words_df=words_df[~words_df.segment.isin(stopwords.stopword)]
 
 ## MapReduce jobs
 
-### choose Item CF
+###  why choose Item CF
 >User CF 
  a form of collaborative filtering based on this similarity between users calculated using people’s ratings of those items
+
 >item CF
  a form of collaborative filtering based on this similarity between items calculated using people’s ratings of those items
+
+1. the number of users weighs more than number of products
+2. item will not change frequenctly
+3. using user's historical data, more convicing
+
 
 Construct the mapreduce job queue and inject dependencies using maven.
 
