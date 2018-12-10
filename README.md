@@ -10,7 +10,7 @@
 
 4.  Deployed MRUnit to test the MapReduce job logic and monitor the output.
 
-*the data presented here is sample data* 
+*the data stored in repository here is sample data* 
 
 
 ## Data preprocessing
@@ -61,6 +61,7 @@ filter the useless rating history with spam comments, no comments, intended poor
 filter the meaningless datas and only remain movie_id paired with movie, user_rating paired with user_id
 
 Mainly using Pandas and regex(re library), numpy, etc
+
 ```python
 comments = ''
 for k in range(len(eachCommentList)):
@@ -84,10 +85,19 @@ words_df=words_df[~words_df.segment.isin(stopwords.stopword)]
 
 
 ## MapReduce jobs
+
+### choose Item CF
+>User CF 
+ a form of collaborative filtering based on this similarity between users calculated using people’s ratings of those items
+>item CF
+ a form of collaborative filtering based on this similarity between items calculated using people’s ratings of those items
+
 Construct the mapreduce job queue and inject dependencies using maven.
 
 Each job queue follows the walkthrough: 
-1. input data from HDFS which stores data in block files
-2. 
+1. import data from HDFS which stores data in block files
+2. read and pair with the raw data through the mapper and the reducer to process the ra data
+3. calculate co-occurrence matrix and normalize the co-occurrence matrix
+4. 
 ## MRUnit test
 
