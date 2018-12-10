@@ -1,4 +1,4 @@
-# Introduction
+### Introduction
 
 Designed and developed a movie recommender system based on Netflix user rating history.
 
@@ -9,3 +9,5 @@ Designed and developed a movie recommender system based on Netflix user rating h
 ◆ Implemented Item CF(collaborative filtering) to calculate and normalize co-occurrence matrix.
 
 ◆ Deployed MRUnit to test the MapReduce job logic and monitor the output.
+
+
