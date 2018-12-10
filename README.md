@@ -12,12 +12,20 @@
 
 
 ## Data preprocessing
+
+# visit the website
+
 Crawled raw data from Netflix
 Python using urllib
-```
+```python
 from urllib import request
-resp = request.urlopen('https://movie.douban.com/nowplaying/hangzhou/')
+resp = request.urlopen('https://netflix.com/')
 html_data = resp.read().decode('utf-8')
+```
+# extract from html
+using beautiful soup ```pip install BeautifulSoup```
+```
+BeautifulSoup(html,"html.parser")
 ```
 
 
