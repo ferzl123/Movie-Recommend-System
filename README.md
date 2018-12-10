@@ -1,6 +1,6 @@
-# **Introduction**
+# Introduction
 
-Designed and developed a movie recommender system based on Netflix user rating history.
+** Designed and developed a movie recommender system based on Netflix user rating history.**
 
 ◆ Utilized data manipulation in Jupiter notebook to integrate and clean the raw data.
 
