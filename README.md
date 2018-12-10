@@ -55,7 +55,9 @@ for item in comment_div_lits:
 ```
 ### data cleaning
 filter the useless rating history with spam comments, no comments, intended poor reviews, etc
+
 filter the meaningless datas and only remain movie_id paired with movie, user_rating paired with user_id
+
 Mainly using Pandas and regex(re library), numpy, etc
 ```python
 comments = ''
