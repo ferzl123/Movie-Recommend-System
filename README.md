@@ -98,12 +98,13 @@ words_df=words_df[~words_df.segment.isin(stopwords.stopword)]
 3. using user's historical data, more convicing
 
 
-Construct the mapreduce job queue and inject dependencies using maven.
+### Construct the mapreduce job queue and inject dependencies using maven.
 
 Each job queue follows the walkthrough: 
 1. import data from HDFS which stores data in block files
 2. read and pair with the raw data through the mapper and the reducer to process the ra data
 3. calculate co-occurrence matrix and normalize the co-occurrence matrix
-4. 
+4. matrix computation to get recommending result
+
 ## MRUnit test
 
