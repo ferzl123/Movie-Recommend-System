@@ -23,7 +23,7 @@ resp = request.urlopen('https://netflix.com/')
 html_data = resp.read().decode('utf-8')
 ```
 # extract from html
-using beautiful soup ```pip install BeautifulSoup```
+using beautiful soup ```python pip install BeautifulSoup```
 ```
 BeautifulSoup(html,"html.parser")
 ```
