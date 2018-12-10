@@ -12,8 +12,9 @@
 
 
 ## Data preprocessing
+(Jupyter Notebook environment)
 
-# visit the website
+### visit the website
 
 Crawled raw data from Netflix
 Python using urllib
@@ -22,8 +23,9 @@ from urllib import request
 resp = request.urlopen('https://netflix.com/')
 html_data = resp.read().decode('utf-8')
 ```
-# extract from html
+### extract from html
 using beautiful soup ``` pip install BeautifulSoup```
+to get the user_id, user_comments, movie_id, movie, user_rating
 ```python
 BeautifulSoup(html,"html.parser")
 
@@ -51,7 +53,30 @@ for item in comment_div_lits:
         if item.find_all('p')[0].string is not None:     
             eachCommentList.append(item.find_all('p')[0].string)
 ```
+### data cleaning
+filter the useless rating history with spam comments, no comments, intended poor reviews, etc
+filter the meaningless datas and only remain movie_id paired with movie, user_rating paired with user_id
+Mainly using Pandas and regex(re library), numpy, etc
+```python
+comments = ''
+for k in range(len(eachCommentList)):
+    comments = comments + (str(eachCommentList[k])).strip()
 
+import re
+
+pattern = re.compile(r'[\u4e00-\u9fa5]+')
+filterdata = re.findall(pattern, comments)
+cleaned_comments = ''.join(filterdata)
+
+import jieba    
+import pandas as pd  
+
+segment = jieba.lcut(cleaned_comments)
+words_df=pd.DataFrame({'segment':segment})
+
+stopwords=pd.read_csv("stopwords.txt",index_col=False,quoting=3,sep="\t",names=['stopword'], encoding='utf-8')#quoting=3全不引用
+words_df=words_df[~words_df.segment.isin(stopwords.stopword)]
+```
 
 
 ## MapReduce jobs
