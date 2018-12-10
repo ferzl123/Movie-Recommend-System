@@ -10,6 +10,8 @@
 
 4.  Deployed MRUnit to test the MapReduce job logic and monitor the output.
 
+*the data presented here is sample data* 
+
 
 ## Data preprocessing
 (Jupyter Notebook environment)
@@ -82,7 +84,10 @@ words_df=words_df[~words_df.segment.isin(stopwords.stopword)]
 
 
 ## MapReduce jobs
+Construct the mapreduce job queue and inject dependencies using maven.
 
-
+Each job queue follows the walkthrough: 
+1. input data from HDFS which stores data in block files
+2. 
 ## MRUnit test
 
